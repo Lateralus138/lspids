@@ -1,0 +1,13 @@
+Source: lspids
+Package: lspids
+Section: utils
+Priority: optional
+Maintainer: Ian Pride <faithnomoread@yahoo.com>
+Homepage: https://github.com/Lateralus138/lspids
+Version: 1.0.0
+Installed-Size: 272
+Architecture: amd64
+Depends: libc6
+Description: List PIDS from the '/proc' directory in Linux
+ List integer PIDS from the '/proc' directory
+ in Linux with some formatting options. 

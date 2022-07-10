@@ -1,0 +1,7 @@
+lspids_list=(
+  -h --help
+  -0 --null
+  -d --delim
+)
+complete -W "$(printf '%s\n' "${lspids_list[@]}")" lspids
+

@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+cd "$(dirname $(dirname $0))"
+make clean || exit 255
+make builddirectories || exit 254
+make buildallobjectslinux || exit 253
+make buildarchivelinux || exit 252
+make clean || exit 251
+#archive="$(basename $(realpath .)).7z"
+#[ -f "$archive" ] && rm -f "$archive"
+#7zz u -m0=lzma -mx=9 -mfb=64 -md=32m -ms=off "$archive" ./
