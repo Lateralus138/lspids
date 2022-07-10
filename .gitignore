@@ -12,6 +12,7 @@
 *.*workspace
 .vscode/*
 linux/release/*
+linux/android/*
 *.deb
 debian/*.deb
 linux/src/lib/*.so

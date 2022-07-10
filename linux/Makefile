@@ -91,7 +91,7 @@ androidstaticall:	android32staticall android64staticall
 
 android32staticall: cleanandroid32static builddirectories buildallobjectsandroidarm32 buildarchivelinux
 	@echo Building static Android 32 bit executable
-	$(AND32GXX) -static $(ANDFLG) $(SRCFLS) -o $(ANDSTC32) $(LDLIBS)
+	$(AND32GXX) -static $(ANDFLG) $(SRCFLS) -o $(ANDSTC32).arm32 $(LDLIBS)
 
 android32static: cleanandroid32static builddirectories
 	@echo Building static Android 32 bit executable
@@ -99,7 +99,7 @@ android32static: cleanandroid32static builddirectories
 
 android64staticall: cleanandroid64static builddirectories buildallobjectsandroidaarch64 buildarchivelinux
 	@echo Building static Android 64 bit executable
-	$(AND64GXX) $(STFLAG) $(ANDFLG) $(SRCFLS) -o $(ANDSTC64) $(LDLIBS)
+	$(AND64GXX) $(STFLAG) $(ANDFLG) $(SRCFLS) -o $(ANDSTC64).aarch64 $(LDLIBS)
 
 android64static: cleanandroid64static builddirectories
 	@echo Building static Android 64 bit executable

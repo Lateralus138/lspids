@@ -1,15 +1,16 @@
 # List PIDS <img src="./docs/media/logo/lspids.png" width="28" alt="lspids logo" style="vertical-align: middle;">
 
-1. [Coming soon](#coming-soon)
-2. [About](#about)
+1. [About](#about)
    1. [Description](#description)
    2. [Motivation](#motivation)
-3. [Usage](#usage)
+2. [Usage](#usage)
    1. [Environment](#environment)
       1. [Files](#files)
       2. [Current Builds MD5](#current-builds-md5)
          1. [Current Linux MD5](#current-linux-md5)
          2. [Current Debian MD5](#current-debian-md5)
+         3. [Current Android ARM32 MD5](#current-android-arm32-md5)
+         4. [Current Android AARCH64 MD5](#current-android-aarch64-md5)
       3. [Project Information](#project-information)
    2. [Debian Installer](#debian-installer)
       1. [Deb Install](#deb-install)
@@ -18,25 +19,26 @@
          2. [HiColor Icon Theme](#hicolor-icon-theme)
          3. [Man Page Entry](#man-page-entry)
    3. [Portable](#portable)
-   4. [Build Yourself](#build-yourself)
+   4. [Android](#android)
+   5. [Build Yourself](#build-yourself)
       1. [Dependencies](#dependencies)
       2. [Build Command](#build-command)
-   5. [Bash Completion](#bash-completion-1)
-   6. [Examples](#examples)
+   6. [Bash Completion](#bash-completion-1)
+   7. [Examples](#examples)
       1. [Help Screen](#help-screen)
       2. [Normal Usage](#normal-usage)
       3. [List in a null terminated list](#list-in-a-null-terminated-list)
       4. [List in a tab delimted list](#list-in-a-tab-delimted-list)
-4. [Media](#media)
+3. [Media](#media)
    1. [Logo](#logo)
    2. [Screenshots](#screenshots)
       1. [Help Screen](#help-screen-1)
       2. [Main Examples](#main-examples)
       3. [Man Page](#man-page)
-5. [Contribute](#contribute)
+4. [Contribute](#contribute)
    1. [Project](#project)
    2. [Donate](#donate)
-6. [LICENSE](#license)
+5. [LICENSE](#license)
 
 <a href="https://twitter.com/intent/tweet?url=https://github.com/Lateralus138/lspids%0D%0A&text=%27lspids%27%20-%20List%20PIDS%20from%20the%20%27%2Fproc%27%20directory%20in%20Linux%20with%20some%20formatting%20options.%20via%20%40thefluxapex&name=medium&hashtags=programming,coding,fun,commandline,Linux" target="_blank">![Twitter URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.github.com%2FLateralus138%2Flspids&label=Tweet%20This%20Project)</a>
 
@@ -48,7 +50,7 @@
 
 ### Description
 
-&#x4C;&#x69;&#x73;&#x74;&#x20;&#x69;&#x6E;&#x74;&#x65;&#x67;&#x65;&#x72;&#x20;***&#x50;&#x49;&#x44;&#x53;***&#x20;&lpar;*&#x70;&#x72;&#x6F;&#x63;&#x65;&#x73;&#x73;&#x20;&#x69;&#x64;&#x65;&#x6E;&#x74;&#x69;&#x66;&#x69;&#x63;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x20;&#x6E;&#x75;&#x6D;&#x62;&#x65;&#x72;&#x73;*&rpar;&#x20;&#x66;&#x72;&#x6F;&#x6D;&#x20;&#x74;&#x68;&#x65;&#x20;&apos;**&sol;&#x70;&#x72;&#x6F;&#x63;**&apos;&#x20;&#x64;&#x69;&#x72;&#x65;&#x63;&#x74;&#x6F;&#x72;&#x79;&#x20;&#x69;&#x6E;&#x20;&#x4C;&#x69;&#x6E;&#x75;&#x78;&#x20;&#x77;&#x69;&#x74;&#x68;&#x20;&#x73;&#x6F;&#x6D;&#x65;&#x20;&#x66;&#x6F;&#x72;&#x6D;&#x61;&#x74;&#x74;&#x69;&#x6E;&#x67;&#x20;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&period;
+&#x4C;&#x69;&#x73;&#x74;&#x20;&#x69;&#x6E;&#x74;&#x65;&#x67;&#x65;&#x72;&#x20;***&#x50;&#x49;&#x44;&#x53;***&#x20;&lpar;*&#x70;&#x72;&#x6F;&#x63;&#x65;&#x73;&#x73;&#x20;&#x69;&#x64;&#x65;&#x6E;&#x74;&#x69;&#x66;&#x69;&#x63;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x20;&#x6E;&#x75;&#x6D;&#x62;&#x65;&#x72;&#x73;*&rpar;&#x20;&#x66;&#x72;&#x6F;&#x6D;&#x20;&#x74;&#x68;&#x65;&#x20;&apos;**&sol;&#x70;&#x72;&#x6F;&#x63;**&apos;&#x20;&#x64;&#x69;&#x72;&#x65;&#x63;&#x74;&#x6F;&#x72;&#x79;&#x20;&#x69;&#x6E;&#x20;&#x4C;&#x69;&#x6E;&#x75;&#x78;&#x20;&lpar;&#x61;&#x6E;&#x64;&#x20;&#x41;&#x6E;&#x64;&#x72;&#x6F;&#x69;&#x64;&#x20;&#x2D;&#x20;&#x54;&#x65;&#x72;&#x6D;&#x75;&#x78;&rpar;&#x20;&#x77;&#x69;&#x74;&#x68;&#x20;&#x73;&#x6F;&#x6D;&#x65;&#x20;&#x66;&#x6F;&#x72;&#x6D;&#x61;&#x74;&#x74;&#x69;&#x6E;&#x67;&#x20;&#x6F;&#x70;&#x74;&#x69;&#x6F;&#x6E;&#x73;&period;
 
 ### Motivation
 
@@ -62,7 +64,7 @@
 
 ### Environment
 
-&#x54;&#x68;&#x69;&#x73;&#x20;&#x69;&#x73;&#x20;&#x61;&#x6E;&#x20;&#x6F;&#x70;&#x65;&#x6E;&#x2D;&#x73;&#x6F;&#x75;&#x72;&#x63;&#x65;&#x20;&lpar;***&#x46;&#x4F;&#x53;&#x53;***&rpar;&#x20;&#x63;&#x6F;&#x6D;&#x6D;&#x61;&#x6E;&#x64;&#x20;&#x6C;&#x69;&#x6E;&#x65;&#x20;&#x75;&#x74;&#x69;&#x6C;&#x69;&#x74;&#x79;&#x20;&#x66;&#x6F;&#x72;&#x20;&#x75;&#x73;&#x65;&#x20;&#x69;&#x6E;&#x20;&#x4C;&#x69;&#x6E;&#x75;&#x78;&#x20;&#x73;&#x68;&#x65;&#x6C;&#x6C;&#x73;&#x20;&lpar;&#x74;&#x65;&#x72;&#x6D;&#x69;&#x6E;&#x61;&#x6C;&#x73;&sol;&#x74;&#x74;&#x79;&#x73;&sol;&#x65;&#x74;&#x63;&period;&rpar;&period;&#x20;&#x54;&#x68;&#x69;&#x73;&#x20;&#x63;&#x61;&#x6E;&#x20;&#x62;&#x65;&#x20;&#x62;&#x75;&#x69;&#x6C;&#x74;&#x20;&#x66;&#x72;&#x6F;&#x6D;&#x20;&#x73;&#x6F;&#x75;&#x72;&#x63;&#x65;&#x20;&lpar;&#x61;&#x73;&#x20;&#x70;&#x65;&#x72;&#x20;&#x74;&#x68;&#x65;&#x20;[LICENSE](./LICENSE)&#x20;&#x66;&#x69;&#x6C;&#x65;&#x20;&#x70;&#x72;&#x6F;&#x76;&#x69;&#x64;&#x65;&#x64;&rpar;&comma;&#x20;&#x75;&#x73;&#x65;&#x64;&#x20;&#x70;&#x6F;&#x72;&#x74;&#x61;&#x62;&#x6C;&#x79;&#x20;&lpar;&#x73;&#x69;&#x6E;&#x67;&#x6C;&#x65;&#x20;&#x65;&#x78;&#x65;&#x63;&#x75;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x20;&#x70;&#x75;&#x74;&#x20;&#x77;&#x68;&#x65;&#x72;&#x65;&#x76;&#x65;&#x72;&#x20;&#x79;&#x6F;&#x75;&#x20;&#x6C;&#x69;&#x6B;&#x65;&rpar;&comma;&#x20;&#x6F;&#x72;&#x20;&#x69;&#x6E;&#x73;&#x74;&#x61;&#x6C;&#x6C;&#x65;&#x64;&#x20;&#x76;&#x69;&#x61;&#x20;&#x74;&#x68;&#x65;&#x20;&#x70;&#x72;&#x6F;&#x76;&#x69;&#x64;&#x65;&#x64;&#x20;**&#x44;&#x65;&#x62;&#x69;&#x61;&#x6E;&#x20;**&lpar;**&period;&#x64;&#x65;&#x62;**&rpar;&#x20;&#x70;&#x61;&#x63;&#x6B;&#x61;&#x67;&#x65;&period;&#x20;
+&#x54;&#x68;&#x69;&#x73;&#x20;&#x69;&#x73;&#x20;&#x61;&#x6E;&#x20;&#x6F;&#x70;&#x65;&#x6E;&#x2D;&#x73;&#x6F;&#x75;&#x72;&#x63;&#x65;&#x20;&lpar;***&#x46;&#x4F;&#x53;&#x53;***&rpar;&#x20;&#x63;&#x6F;&#x6D;&#x6D;&#x61;&#x6E;&#x64;&#x20;&#x6C;&#x69;&#x6E;&#x65;&#x20;&#x75;&#x74;&#x69;&#x6C;&#x69;&#x74;&#x79;&#x20;&#x66;&#x6F;&#x72;&#x20;&#x75;&#x73;&#x65;&#x20;&#x69;&#x6E;&#x20;&#x4C;&#x69;&#x6E;&#x75;&#x78;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x41;&#x6E;&#x64;&#x72;&#x6F;&#x69;&#x64;&#x20;&#x73;&#x68;&#x65;&#x6C;&#x6C;&#x73;&#x20;&lpar;&#x74;&#x65;&#x72;&#x6D;&#x69;&#x6E;&#x61;&#x6C;&#x73;&sol;&#x74;&#x74;&#x79;&#x73;&sol;&#x54;&#x65;&#x72;&#x6D;&#x75;&#x78;&sol;&#x65;&#x74;&#x63;&period;&rpar;&period;&#x20;&#x54;&#x68;&#x69;&#x73;&#x20;&#x63;&#x61;&#x6E;&#x20;&#x62;&#x65;&#x20;&#x62;&#x75;&#x69;&#x6C;&#x74;&#x20;&#x66;&#x72;&#x6F;&#x6D;&#x20;&#x73;&#x6F;&#x75;&#x72;&#x63;&#x65;&#x20;&lpar;&#x61;&#x73;&#x20;&#x70;&#x65;&#x72;&#x20;&#x74;&#x68;&#x65;&#x20;[LICENSE](./LICENSE)&#x20;&#x66;&#x69;&#x6C;&#x65;&#x20;&#x70;&#x72;&#x6F;&#x76;&#x69;&#x64;&#x65;&#x64;&rpar;&comma;&#x20;&#x75;&#x73;&#x65;&#x64;&#x20;&#x70;&#x6F;&#x72;&#x74;&#x61;&#x62;&#x6C;&#x79;&#x20;&lpar;&#x73;&#x69;&#x6E;&#x67;&#x6C;&#x65;&#x20;&#x65;&#x78;&#x65;&#x63;&#x75;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x20;&#x70;&#x75;&#x74;&#x20;&#x77;&#x68;&#x65;&#x72;&#x65;&#x76;&#x65;&#x72;&#x20;&#x79;&#x6F;&#x75;&#x20;&#x6C;&#x69;&#x6B;&#x65;&rpar;&comma;&#x20;&#x6F;&#x72;&#x20;&#x69;&#x6E;&#x73;&#x74;&#x61;&#x6C;&#x6C;&#x65;&#x64;&#x20;&#x76;&#x69;&#x61;&#x20;&#x74;&#x68;&#x65;&#x20;&#x70;&#x72;&#x6F;&#x76;&#x69;&#x64;&#x65;&#x64;&#x20;**&#x44;&#x65;&#x62;&#x69;&#x61;&#x6E;&#x20;**&lpar;**&period;&#x64;&#x65;&#x62;**&rpar;&#x20;&#x70;&#x61;&#x63;&#x6B;&#x61;&#x67;&#x65;&period;&#x20;
 
 &#x54;&#x68;&#x65;&#x20;&#x72;&#x65;&#x63;&#x6F;&#x6D;&#x6D;&#x65;&#x6E;&#x64;&#x65;&#x64;&#x20;&#x6D;&#x65;&#x74;&#x68;&#x6F;&#x64;&#x20;&#x6F;&#x66;&#x20;&#x75;&#x73;&#x65;&#x20;&#x69;&#x73;&#x20;&#x76;&#x69;&#x61;&#x20;&#x74;&#x68;&#x65;&#x20;&#x44;&#x65;&#x62;&#x69;&#x61;&#x6E;&#x20;&#x70;&#x61;&#x63;&#x6B;&#x61;&#x67;&#x65;&#x20;&#x69;&#x6E;&#x73;&#x74;&#x61;&#x6C;&#x6C;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x20;&#x66;&#x6F;&#x72;&#x20;&#x74;&#x68;&#x65;&#x20;&#x44;&#x65;&#x62;&#x69;&#x61;&#x6E;&#x20;&lpar;&#x61;&#x70;&#x74;&comma;&#x20;&#x64;&#x65;&#x62;&rpar;&#x20;&#x70;&#x61;&#x63;&#x6B;&#x61;&#x67;&#x65;&#x72;&#x20;&#x6D;&#x61;&#x6E;&#x61;&#x67;&#x65;&#x72;&comma;&#x20;&#x62;&#x75;&#x74;&#x20;&#x74;&#x68;&#x65;&#x72;&#x65;&#x20;&#x61;&#x72;&#x65;&#x20;&#x6F;&#x74;&#x68;&#x65;&#x72;&#x20;&#x6D;&#x65;&#x74;&#x68;&#x6F;&#x64;&#x73;&#x20;&#x70;&#x72;&#x6F;&#x76;&#x69;&#x64;&#x65;&#x64;&#x20;&#x68;&#x65;&#x72;&#x65;&#x20;&#x6F;&#x72;&#x20;&#x69;&#x66;&#x20;&#x79;&#x6F;&#x75;&#x20;&#x77;&#x6F;&#x75;&#x6C;&#x64;&#x20;&#x63;&#x61;&#x72;&#x65;&#x20;&#x74;&#x6F;&#x20;&#x70;&#x72;&#x6F;&#x76;&#x69;&#x64;&#x65;&#x20;&#x61;&#x6E;&#x20;&#x69;&#x6E;&#x73;&#x74;&#x61;&#x6C;&#x6C;&#x65;&#x72;&#x20;&#x66;&#x6F;&#x72;&#x20;&#x61;&#x20;&#x64;&#x69;&#x66;&#x66;&#x65;&#x72;&#x65;&#x6E;&#x74;&#x20;&#x70;&#x61;&#x63;&#x6B;&#x61;&#x67;&#x65;&#x20;&#x6D;&#x61;&#x6E;&#x61;&#x67;&#x65;&#x72;&#x20;&#x74;&#x68;&#x65;&#x6E;&#x20;&#x70;&#x6C;&#x65;&#x61;&#x73;&#x65;&#x20;&#x66;&#x6F;&#x72;&#x6B;&#x20;&#x74;&#x68;&#x69;&#x73;&#x20;&#x70;&#x72;&#x6F;&#x6A;&#x65;&#x63;&#x74;&comma;&#x20;&#x62;&#x75;&#x69;&#x6C;&#x64;&#x20;&#x74;&#x68;&#x65;&#x20;&#x61;&#x70;&#x70;&#x72;&#x6F;&#x70;&#x72;&#x69;&#x61;&#x74;&#x65;&#x20;&#x77;&#x6F;&#x72;&#x6B;&#x66;&#x6C;&#x6F;&#x77;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x73;&#x6F;&#x75;&#x72;&#x63;&#x65;&#x20;&#x66;&#x69;&#x6C;&#x65;&#x73;&comma;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x6D;&#x61;&#x6B;&#x65;&#x20;&#x61;&#x20;&#x70;&#x75;&#x6C;&#x6C;&#x2D;&#x72;&#x65;&#x71;&#x75;&#x65;&#x73;&#x74;&period;&#x20;&#x4D;&#x6F;&#x72;&#x65;&#x20;&#x69;&#x6E;&#x66;&#x6F;&#x72;&#x6D;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x20;&#x61;&#x62;&#x6F;&#x75;&#x74;&#x20;&#x63;&#x6F;&#x6E;&#x74;&#x72;&#x69;&#x62;&#x75;&#x74;&#x69;&#x6E;&#x67;&#x20;[here](#contribute)&period;
 
@@ -83,6 +85,14 @@
 ##### Current Debian MD5
 
 ![Debian MD5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/lspids/master/docs/json/lspids_debian_md5.json)
+
+##### Current Android ARM32 MD5
+
+![Android ARM32 MD5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/lspids/master/docs/json/lspids_arm32_md5.json)
+
+##### Current Android AARCH64 MD5
+
+![Android AARCH64 MD5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/lspids/master/docs/json/lspids_aarch64_md5.json)
 
 #### Project Information
 
@@ -188,6 +198,11 @@ lspids - 1.0.0                                                     Sat 09 Jul 20
  # Not in $PATH
  $ /full/or/relative/path/to/lspids --help
 ```
+### Android
+
+The Android executables (*.arm32* and *.aarch64*) are portable and should probably be installed to `/data/data/com.termux/files/usr/bin/lspids` (removing the extensions if you like). I plan to build a deb installer in the future.
+
+&#x54;&#x68;&#x65;&#x20;&#x41;&#x6E;&#x64;&#x72;&#x6F;&#x69;&#x64;&#x20;&#x65;&#x78;&#x65;&#x63;&#x75;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x73;&#x20;&lpar;*&period;&#x61;&#x72;&#x6D;&#x33;&#x32;*&#x20;&#x61;&#x6E;&#x64;&#x20;*&period;&#x61;&#x61;&#x72;&#x63;&#x68;&#x36;&#x34;*&rpar;&#x20;&#x61;&#x72;&#x65;&#x20;&#x70;&#x6F;&#x72;&#x74;&#x61;&#x62;&#x6C;&#x65;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x73;&#x68;&#x6F;&#x75;&#x6C;&#x64;&#x20;&#x70;&#x72;&#x6F;&#x62;&#x61;&#x62;&#x6C;&#x79;&#x20;&#x62;&#x65;&#x20;&#x69;&#x6E;&#x73;&#x74;&#x61;&#x6C;&#x6C;&#x65;&#x64;&#x20;&#x74;&#x6F;&#x20;`/data/data/com.termux/files/usr/bin/lspids`&#x20;&lpar;&#x72;&#x65;&#x6D;&#x6F;&#x76;&#x69;&#x6E;&#x67;&#x20;&#x74;&#x68;&#x65;&#x20;&#x65;&#x78;&#x74;&#x65;&#x6E;&#x73;&#x69;&#x6F;&#x6E;&#x73;&#x20;&#x69;&#x66;&#x20;&#x79;&#x6F;&#x75;&#x20;&#x6C;&#x69;&#x6B;&#x65;&rpar;&period;&#x20;&#x49;&#x20;&#x70;&#x6C;&#x61;&#x6E;&#x20;&#x74;&#x6F;&#x20;&#x62;&#x75;&#x69;&#x6C;&#x64;&#x20;&#x61;&#x20;&#x64;&#x65;&#x62;&#x20;&#x69;&#x6E;&#x73;&#x74;&#x61;&#x6C;&#x6C;&#x65;&#x72;&#x20;&#x69;&#x6E;&#x20;&#x74;&#x68;&#x65;&#x20;&#x66;&#x75;&#x74;&#x75;&#x72;&#x65;&period;
 
 ### Build Yourself
 
