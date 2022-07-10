@@ -37,6 +37,8 @@
    2. [Donate](#donate)
 6. [LICENSE](#license)
 
+<a href="https://twitter.com/intent/tweet?url=https://github.com/Lateralus138/lspids%0D%0A&text=%27lspids%27%20-%20List%20PIDS%20from%20the%20%27%2Fproc%27%20directory%20in%20Linux%20with%20some%20formatting%20options.%20via%20%40thefluxapex&name=medium&hashtags=programming,coding,fun,commandline" target="_blank">![Twitter URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.github.com%2FLateralus138%2Flspids&label=Tweet%20This%20Project)</a>
+
 ---
 
 ## Coming soon
