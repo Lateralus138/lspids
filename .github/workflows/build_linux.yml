@@ -53,14 +53,14 @@ jobs:
           touch "${rootpath}/docs/json/lspids_arm32_md5.json"
         fi
         echo -e "$lspids_arm32_md5_text" > "${rootpath}/docs/json/lspids_arm32_md5.json"
-        sed -i "s/\"message\": \".*\"/\"message\": \"$(md5sum ${rootpath}/linux/android/static/32/lspids.arm32 | cut -d' ' -f 1)\"/g" "${rootpath}/docs/json/lspids_arm32_md5.json" 
+        sed -i "s/\"message\": \".*\"/\"message\": \"$(md5sum ${rootpath}/linux/android/static/32/lspids.arm32 | cut -d' ' -f 1)\"/g" "${rootpath}/docs/json/lspids_arm32_md5.json"
         make android64staticall || exit 118
         lspids_aarch64_md5_text='{\n\t"schemaVersion": 1,\n\t"color": "2E9778",\n\t"label": "lspids.aarch64 MD5",\n\t"message": "PLACEHOLDER",\n\t"labelColor": "1d1d1d",\n\t"style": "for-the-badge",\n\t"namedLogo": "android"\n}'
         if ! [[ -f "${rootpath}/docs/json/lspids_aarch64_md5.json" ]]; then
           touch "${rootpath}/docs/json/lspids_aarch64_md5.json"
         fi
         echo -e "$lspids_aarch64_md5_text" > "${rootpath}/docs/json/lspids_aarch64_md5.json"
-        sed -i "s/\"message\": \".*\"/\"message\": \"$(md5sum ${rootpath}/linux/android/static/64/lspids.aarch64 | cut -d' ' -f 1)\"/g" "${rootpath}/docs/json/lspids_aarch64_md5.json" 
+        sed -i "s/\"message\": \".*\"/\"message\": \"$(md5sum ${rootpath}/linux/android/static/64/lspids.aarch64 | cut -d' ' -f 1)\"/g" "${rootpath}/docs/json/lspids_aarch64_md5.json"
         cd "${rootpath}"
         git add ${rootpath}/docs/json/*
         git config --global user.name 'Lateralus138'
