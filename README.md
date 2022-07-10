@@ -10,6 +10,7 @@
       2. [Current Builds MD5](#current-builds-md5)
          1. [Current Linux MD5](#current-linux-md5)
          2. [Current Debian MD5](#current-debian-md5)
+      3. [Project Information](#project-information)
    2. [Debian Installer](#debian-installer)
       1. [Deb Install](#deb-install)
       2. [Deb Provides](#deb-provides)
@@ -91,6 +92,10 @@
 ##### Current Debian MD5
 
 ![Debian MD5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Lateralus138/lspids/master/docs/json/lspids_debian_md5.json)
+
+#### Project Information
+
+![Current CPP](https://img.shields.io/codefactor/grade/github/Lateralus138/lspids/master?style=for-the-badge&labelColor=1D1D1D&label=Code%20Factor%20Grade&color=ffff99)
 
 ### Debian Installer
 
