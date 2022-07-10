@@ -1,6 +1,6 @@
 # List PIDS - [lspids]
 
-Display the 4bit colors of the current console&#46;
+List integer PIDS from the '/proc' directory in Linux with some formatting options.
 
 ---
 
