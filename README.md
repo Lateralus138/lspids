@@ -95,6 +95,8 @@
 
 #### Project Information
 
+[Code Factor IO](https://www.codefactor.io/) grade from combined source files and workflow scripts in this project (currently 7 files).
+
 ![Current CPP](https://img.shields.io/codefactor/grade/github/Lateralus138/lspids/master?style=for-the-badge&labelColor=1D1D1D&label=Code%20Factor%20Grade&color=ffff99)
 
 ### Debian Installer
