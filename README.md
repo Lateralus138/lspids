@@ -354,7 +354,7 @@ complete -W "$(printf '%s\n' "${lspids_list[@]}")" lspids
 
 ### Project
 
-&#x59;&#x6F;&#x75;&#x20;&#x63;&#x61;&#x6E;&#x20;[fork this project](https:///www.github.com/Lateralus138/lspids/fork)&comma;&#x20;&#x6D;&#x61;&#x6B;&#x65;&#x20;&#x79;&#x6F;&#x75;&#x72;&#x20;&#x63;&#x6F;&#x6E;&#x74;&#x72;&#x69;&#x62;&#x75;&#x74;&#x69;&#x6F;&#x6E;&#x73;&comma;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x6D;&#x61;&#x6B;&#x65;&#x20;&#x61;&#x20;&#x70;&#x75;&#x6C;&#x6C;&#x2D;&#x72;&#x65;&#x71;&#x75;&#x65;&#x73;&#x74;&period;
+&#x59;&#x6F;&#x75;&#x20;&#x63;&#x61;&#x6E;&#x20;[fork this project](https://www.github.com/Lateralus138/lspids/fork)&comma;&#x20;&#x6D;&#x61;&#x6B;&#x65;&#x20;&#x79;&#x6F;&#x75;&#x72;&#x20;&#x63;&#x6F;&#x6E;&#x74;&#x72;&#x69;&#x62;&#x75;&#x74;&#x69;&#x6F;&#x6E;&#x73;&comma;&#x20;&#x61;&#x6E;&#x64;&#x20;&#x6D;&#x61;&#x6B;&#x65;&#x20;&#x61;&#x20;&#x70;&#x75;&#x6C;&#x6C;&#x2D;&#x72;&#x65;&#x71;&#x75;&#x65;&#x73;&#x74;&period;
 
 ### Donate
 
